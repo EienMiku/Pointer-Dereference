@@ -45,7 +45,7 @@ namespace ptr {
             constexpr pointer(pointer &&other) noexcept            = default;
             constexpr pointer &operator=(pointer &&other) noexcept = default;
 
-            bool operator==(const pointer &) const = default;
+            constexpr bool operator==(const pointer &) const noexcept = default;
 
             constexpr size_type size() const noexcept {
                 return ptr_lvl;
